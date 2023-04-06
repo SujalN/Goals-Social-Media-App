@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 
 const API_URL = "http://localhost:5000/api/goals/"
 
-// get goals
+// Get goals
 const getGoals = async(token) => {
     const config = {
         headers: {
