@@ -12,7 +12,7 @@ const getGoals = asyncHandler (async (req, res) => {
     res.status(200).json(goals)
 })
 
-// @desc set goal
+// @desc Set goal
 // @route POST /api/goals
 // @access Private
 const setGoal = asyncHandler (async (req, res) => {
@@ -59,7 +59,7 @@ const updateGoals = asyncHandler (async (req, res) => {
   res.status(200).json(updatedGoal)
 })
 
-// @desc delete goals
+// @desc Delete goals
 // @route DELETE /api/goals
 // @access Private
 const deleteGoals = asyncHandler( async (req, res) => {

@@ -15,7 +15,7 @@ const registerUser = asyncHandler(async(req,res) => {
         throw new Error('please add all fields')
     }
 
-    //check if user exists
+    // Check if user exists
     const userExists = await User.findOne({email})
 
     if (userExists) {
@@ -23,11 +23,11 @@ const registerUser = asyncHandler(async(req,res) => {
         throw new Error('user already exists')
     }
 
-    // hash password
+    // Hash password
     const salt = await bcrypt.genSalt(10)
     const hashedPassword = await bcrypt.hash(password, salt)
 
-    //Create user
+    // Create user
     const newUser = await User.create({
         name,
         email,
@@ -53,7 +53,7 @@ const registerUser = asyncHandler(async(req,res) => {
 const loginUser = asyncHandler(async(req,res) => {
     const {email, password} = req.body;
 
-    //check for user email
+    // Check for user email
     const user = await User.findOne({email});
     
     if (user && (await bcrypt.compare(password, user.password))) {

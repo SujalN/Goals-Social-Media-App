@@ -1,5 +1,5 @@
 {
-  "name": "mern-tutorial",
+  "name": "mern",
   "version": "1.0.0",
   "description": "goalsetter app for youtube tutorial",
   "main": "server.js",

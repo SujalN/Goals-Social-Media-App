@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 
+// Objects unique to user
 const userSchema = mongoose.Schema({
     name: {
         type: String,

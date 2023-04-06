@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 
+// Objects unique to post
 const goalSchema = mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
